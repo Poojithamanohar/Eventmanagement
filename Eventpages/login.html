@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System Website</title>
+    <!--Linking CSS file-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&family=Dancing+Script:wght@500&family=Fleur+De+Leah&family=Monsieur+La+Doulaise&family=Sacramento&family=Tangerine&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Handlee&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a8e71d5047.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a8e71d5047.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <section class="loge">
+        <div class="container">
+            <div class="log">
+                <h1 style="text-align:center;"><p>Phase Events</p></h1>
+             </div>
+            <div class="myan text-center">
+                <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">AboutUs</a>
+                </li>
+                <li>
+                    <a href="ourservices.html">OurServices</a>
+                </li>
+                <li>
+                    <a href="testimonials.html">Testimonials</a>
+                </li>
+                <li>
+                    <a href="spfy.html">SPFY</a>
+                </li>
+                <li>
+                    <a href="contact.html">ContactUs</a>
+                </li>
+                <li><button class='loginbtn'onclick="document.getElementById('login-form').style.display='block'"style="width:auto;"><a href="login.html">LOGIN</a></button></li>
+                </ul>
+        </div>
+    <div id="login-form" class="login-page">
+        <div class="form-box">
+            <div class="button-box">
+                <div id="btn"></div>
+                <button type="button"onclick="login()"class="toggle-btn">Log In</button>
+                <button type="button"onclick="register()"class="toggle-btn">Register</button>
+            </div>
+            <form id="login" class="input-group-login">
+                <input type="text" class="input-field"placeholder="  Email Id" required>
+                <input type="password" class="input-field"placeholder="  Enter Password" required>
+                <input type="checkbox" class="check-box"><span>  Remember Password</span>
+                <button type="submit" class="submit-btn">Log in</button>
+            </form>
+            <form id="register"class="input-group-register">
+                <input type="text"class="input-field" placeholder="  First Name" required>
+                <input type="text"class="input-field" placeholder="  Last Name" required>
+                <input type="email"class="input-field" placeholder="  Email Id" required>
+                <input type="password"class="input-field" placeholder="  Enter Password" required>
+                <input type="password"class="input-field" placeholder="  Confirm Password" required>
+                <input type="checkbox"class="check-box"><span>  I agree to the terms<br>and conditions</span>
+                <button type="submit" class="submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+</section>
+<script>
+    var x=document.getElementById("login");
+    var y=document.getElementById("register");
+    var z=document.getElementById("btn");
+    function register()
+    {
+        x.style.left= "450px";
+        y.style.left="-250px";
+        z.style.left="110px";
+    }
+    function login()
+    {
+        x.style.left="-250px";
+        y.style.left="450px";
+        z.style.left="0px";
+    }
+</script>
+<script>
+    var modal = document.getElementById("login-form");
+    window.onclick = function(event)
+    {
+        if(event.target == modal)
+        {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
